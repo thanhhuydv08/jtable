@@ -1,0 +1,14 @@
+Object [] columNames = {"Tên sách","Tác Giả","NXB","Giá bìa"};
+		jTable = new JTable(new DefaultTableModel(columNames,1)); // cho phep value cac row null va 1 row thoi
+    jTable.getColumnModel().getColumn(0).setPreferredWidth(200);// thay doi do rong cua colums
+		jTable.getColumnModel().getColumn(1).setPreferredWidth(130);
+		jTable.getColumnModel().getColumn(2).setPreferredWidth(100);
+		jTable.getColumnModel().getColumn(3).setPreferredWidth(70);
+		jTable.setBackground(Color.orange);
+		jTable.getTableHeader().setBackground(Color.green); // thay doi mau cua header
+		JScrollPane jScrollPane = new JScrollPane(jTable);  // DAT BIET CHU Y LA JSCROOLPANE  va truyen vao jtable 
+		jScrollPane.setViewportBorder(new LineBorder(new Color(175, 238, 238)));
+		jScrollPane.setLocation(0, 118);                   // bat buoc phai có
+		jScrollPane.setSize(556, 143);                     // bat buoc co, tao do rong bat ky sau do chinh lai
+		jScrollPane.setBackground(Color.ORANGE);
+		frmTmKiemsSch.getContentPane().add(jScrollPane);    // xong add jscrollpane vao frame
